@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Un sorteador personal de tortas, tartas, budines, masas, galletitas, postres y preparaciones con fruta.">
+  <title>Algo dulce — Recetario personal</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="sweetPage">
+  <header class="siteHeader">
+    <a class="brand" href="./dulces.html#top" aria-label="Algo dulce, volver al inicio">
+      <span>algo</span>
+      <span>dulce</span>
+    </a>
+
+    <nav class="mainNav" aria-label="Navegación principal">
+      <a href="./index.html">Cenas</a>
+      <a href="#recipe">Sorteo</a>
+      <a href="#selection">Mi selección</a>
+      <a href="#catalog">Recetas</a>
+    </nav>
+
+    <a class="mobileSwitch" href="./index.html">Cenas</a>
+
+    <div class="portion compactPortion">
+      <span>Tamaño</span>
+      <div class="seg" role="group" aria-label="Tamaño de la tanda">
+        <button id="one" class="active" type="button" aria-pressed="true">1×</button>
+        <button id="two" type="button" aria-pressed="false">2×</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="app">
+    <section class="intro" aria-labelledby="pageTitle">
+      <div>
+        <p class="eyebrow">Recetario personal · horno y postres</p>
+        <h1 id="pageTitle">Un gusto dulce,<br><em>sin complicarlo demasiado.</em></h1>
+      </div>
+      <div class="introCopy">
+        <p><span id="recipeTotalIntro">82</span> preparaciones entre tortas, tartas, budines, masas, galletitas, postres y frutas. Hay opciones breves y otras para una tarde con tiempo; el sorteo recorre todo antes de volver a empezar.</p>
+        <a class="textLink" href="#recipe">Elegir algo dulce <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section id="recipe" class="featureSection" aria-labelledby="title">
+      <article class="recipeFeature">
+        <figure id="recipeVisual" class="recipeVisual" data-tone="idle">
+          <img id="recipeImage" class="recipeImage" alt="" hidden>
+          <div id="visualPlaceholder" class="visualPlaceholder">
+            <span id="visualNumber" class="visualNumber">82</span>
+            <span id="visualLabel" class="visualLabel">algo<br>dulce</span>
+            <span class="visualCaption">Tu cocina, tu recetario</span>
+          </div>
+        </figure>
+
+        <div class="recipeIntro">
+          <div class="meta">
+            <span id="category" class="badge">Listo para sortear</span>
+            <span id="time" class="muted">82 opciones · sin repetir</span>
+          </div>
+
+          <h2 id="title" class="title">¿Qué preparo hoy?</h2>
+          <p id="note" class="note">Una preparación dulce al azar, elegida entre todo este recetario.</p>
+          <p id="source" class="recipeSource" hidden></p>
+          <span id="announcement" class="srOnly" aria-live="polite"></span>
+
+          <div class="actions" aria-label="Acciones de la receta">
+            <button id="pick" class="btn primary" type="button">Sortear algo dulce</button>
+            <button id="another" class="btn secondary" type="button">Otra opción</button>
+            <button id="favorite" class="btn quiet" type="button" disabled>Guardar receta</button>
+          </div>
+
+          <div class="quickFacts" aria-label="Estado del recetario">
+            <p><strong id="remaining">82</strong><span>sin sortear</span></p>
+            <p><strong id="favoriteCount">0</strong><span>guardadas</span></p>
+          </div>
+        </div>
+      </article>
+
+      <div class="recipeBody">
+        <aside class="ingredientsPanel" aria-labelledby="ingredientsTitle">
+          <div class="sectionHeading">
+            <p class="eyebrow">Mise en place</p>
+            <h3 id="ingredientsTitle">Ingredientes</h3>
+          </div>
+          <ul id="ingredients" class="ingredients">
+            <li>Seleccioná una receta para ver las cantidades.</li>
+          </ul>
+        </aside>
+
+        <section class="methodColumn" aria-labelledby="methodTitle">
+          <div id="prepBlock" class="guidance prepGuide" hidden>
+            <p class="eyebrow">Orden de trabajo</p>
+            <h3>Antes de empezar</h3>
+            <p id="prep"></p>
+          </div>
+
+          <div class="methodBlock">
+            <div class="sectionHeading">
+              <p class="eyebrow">Paso a paso</p>
+              <h3 id="methodTitle">Método</h3>
+            </div>
+            <ol id="steps" class="steps">
+              <li>Las instrucciones aparecen al sortear una preparación.</li>
+            </ol>
+          </div>
+
+          <aside id="tipBlock" class="guidance tipGuide" hidden>
+            <p class="eyebrow">Nota de cocina</p>
+            <h3>Punto clave</h3>
+            <p id="tip"></p>
+          </aside>
+        </section>
+      </div>
+    </section>
+
+    <section id="selection" class="selectionSection" aria-labelledby="selectionTitle">
+      <div class="sectionIntro">
+        <p class="eyebrow">Tu recorrido</p>
+        <h2 id="selectionTitle">Lo dulce que apareció</h2>
+        <p>Volvé a una receta sorteada o abrí una de tus guardadas.</p>
+      </div>
+
+      <div class="selectionGrid">
+        <section class="listPanel" aria-labelledby="historyTitle">
+          <div class="panelHeading">
+            <h3 id="historyTitle">Últimas sorteadas</h3>
+            <span>Hasta 7</span>
+          </div>
+          <ol id="history" class="list">
+            <li class="empty">Todavía no sorteaste ninguna.</li>
+          </ol>
+        </section>
+
+        <section class="listPanel" aria-labelledby="favoritesTitle">
+          <div class="panelHeading">
+            <h3 id="favoritesTitle">Recetas guardadas</h3>
+            <span>Tu selección</span>
+          </div>
+          <ul id="favorites" class="list">
+            <li class="empty">Todavía no guardaste recetas.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <details id="catalog" class="catalogSection">
+      <summary>
+        <span>
+          <small>Recetario dulce</small>
+          <strong>Explorar las <span id="recipeTotalCatalog">82</span> recetas</strong>
+        </span>
+        <span class="summaryAction">Abrir <span aria-hidden="true">↓</span></span>
+      </summary>
+      <div id="catalogFilters" class="catalogFilters" aria-label="Filtrar recetas por categoría"></div>
+      <div id="grid" class="grid"></div>
+    </details>
+
+    <footer class="foot">
+      <p><span id="recipeTotalFooter">82</span> adaptaciones propias inspiradas en la repostería casera de Doña Petrona y en <em>Pastelería Base</em>, de Osvaldo Gross.</p>
+      <p>La tanda base es chica; usá 2× para duplicarla. En masas leudadas y postres fríos, el tiempo contempla también los reposos principales.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./js/sweet-recipes.js"></script>
+  <script src="./js/gross-tortas-y-masitas.js"></script>
+  <script src="./js/gross-budines-y-hojaldres.js"></script>
+  <script src="./js/gross-leudados-y-postres.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

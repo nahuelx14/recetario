@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Un recetario personal de cenas caseras, saludables y sin repeticiones.">
+  <title>¿Qué ceno hoy? — Recetario personal</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="siteHeader">
+    <a class="brand" href="./index.html#top" aria-label="Cenas de casa, volver al inicio">
+      <span>cenas</span>
+      <span>de casa</span>
+    </a>
+
+    <nav class="mainNav" aria-label="Navegación principal">
+      <a href="#recipe">Sorteo</a>
+      <a href="#selection">Mi selección</a>
+      <a href="#catalog">Recetas</a>
+      <a href="./dulces.html">Algo dulce</a>
+    </nav>
+
+    <a class="mobileSwitch" href="./dulces.html">Algo dulce</a>
+
+    <div class="portion compactPortion">
+      <span>Cantidades</span>
+      <div class="seg" role="group" aria-label="Cantidad de personas">
+        <button id="one" class="active" type="button" aria-pressed="true">1</button>
+        <button id="two" type="button" aria-pressed="false">2</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="app">
+    <section class="intro" aria-labelledby="pageTitle">
+      <div>
+        <p class="eyebrow">Recetario personal · cocina cotidiana</p>
+        <h1 id="pageTitle">Una buena cena,<br><em>sin pensarlo demasiado.</em></h1>
+      </div>
+      <div class="introCopy">
+        <p><span id="recipeTotalIntro">112</span> recetas caseras adaptadas a tu despensa, con verduras, legumbres, huevos y técnica. El sorteo recorre todo el recetario antes de volver a empezar.</p>
+        <a class="textLink" href="#recipe">Elegir la cena de hoy <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section id="recipe" class="featureSection" aria-labelledby="title">
+      <article class="recipeFeature">
+        <figure id="recipeVisual" class="recipeVisual" data-tone="idle">
+          <img id="recipeImage" class="recipeImage" alt="" hidden>
+          <div id="visualPlaceholder" class="visualPlaceholder">
+            <span id="visualNumber" class="visualNumber">112</span>
+            <span id="visualLabel" class="visualLabel">recetas<br>de casa</span>
+            <span class="visualCaption">Tu cocina, tu recetario</span>
+          </div>
+        </figure>
+
+        <div class="recipeIntro">
+          <div class="meta">
+            <span id="category" class="badge">Listo para sortear</span>
+            <span id="time" class="muted">112 opciones · sin repetir</span>
+          </div>
+
+          <h2 id="title" class="title">¿Qué ceno hoy?</h2>
+          <p id="note" class="note">Una cena al azar, elegida entre todas las recetas del recetario.</p>
+          <span id="announcement" class="srOnly" aria-live="polite"></span>
+
+          <div class="actions" aria-label="Acciones de la receta">
+            <button id="pick" class="btn primary" type="button">Sortear mi cena</button>
+            <button id="another" class="btn secondary" type="button">Otra opción</button>
+            <button id="favorite" class="btn quiet" type="button" disabled>Guardar receta</button>
+          </div>
+
+          <div class="quickFacts" aria-label="Estado del recetario">
+            <p><strong id="remaining">112</strong><span>sin sortear</span></p>
+            <p><strong id="favoriteCount">0</strong><span>guardadas</span></p>
+          </div>
+        </div>
+      </article>
+
+      <div class="recipeBody">
+        <aside class="ingredientsPanel" aria-labelledby="ingredientsTitle">
+          <div class="sectionHeading">
+            <p class="eyebrow">Mise en place</p>
+            <h3 id="ingredientsTitle">Ingredientes</h3>
+          </div>
+          <ul id="ingredients" class="ingredients">
+            <li>Seleccioná una receta para ver las cantidades.</li>
+          </ul>
+        </aside>
+
+        <section class="methodColumn" aria-labelledby="methodTitle">
+          <div id="prepBlock" class="guidance prepGuide" hidden>
+            <p class="eyebrow">Orden de trabajo</p>
+            <h3>Antes de empezar</h3>
+            <p id="prep"></p>
+          </div>
+
+          <div class="methodBlock">
+            <div class="sectionHeading">
+              <p class="eyebrow">Paso a paso</p>
+              <h3 id="methodTitle">Método</h3>
+            </div>
+            <ol id="steps" class="steps">
+              <li>Las instrucciones están pensadas para alguien que ya maneja las técnicas.</li>
+            </ol>
+          </div>
+
+          <aside id="tipBlock" class="guidance tipGuide" hidden>
+            <p class="eyebrow">Nota de cocina</p>
+            <h3>Punto clave</h3>
+            <p id="tip"></p>
+          </aside>
+        </section>
+      </div>
+    </section>
+
+    <section id="selection" class="selectionSection" aria-labelledby="selectionTitle">
+      <div class="sectionIntro">
+        <p class="eyebrow">Tu recorrido</p>
+        <h2 id="selectionTitle">Lo último que apareció</h2>
+        <p>Volvé a una receta sorteada o abrí una de tus guardadas.</p>
+      </div>
+
+      <div class="selectionGrid">
+        <section class="listPanel" aria-labelledby="historyTitle">
+          <div class="panelHeading">
+            <h3 id="historyTitle">Últimas sorteadas</h3>
+            <span>Hasta 7</span>
+          </div>
+          <ol id="history" class="list">
+            <li class="empty">Todavía no sorteaste ninguna.</li>
+          </ol>
+        </section>
+
+        <section class="listPanel" aria-labelledby="favoritesTitle">
+          <div class="panelHeading">
+            <h3 id="favoritesTitle">Recetas guardadas</h3>
+            <span>Tu selección</span>
+          </div>
+          <ul id="favorites" class="list">
+            <li class="empty">Todavía no guardaste recetas.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <details id="catalog" class="catalogSection">
+      <summary>
+        <span>
+          <small>Recetario completo</small>
+          <strong>Explorar las <span id="recipeTotalCatalog">112</span> recetas</strong>
+        </span>
+        <span class="summaryAction">Abrir <span aria-hidden="true">↓</span></span>
+      </summary>
+      <div id="catalogFilters" class="catalogFilters" aria-label="Filtrar recetas por categoría"></div>
+      <div id="grid" class="grid"></div>
+    </details>
+
+    <footer class="foot">
+      <p><span id="recipeTotalFooter">112</span> recetas nuevas inspiradas en la cocina casera argentina y adaptadas a tu despensa.</p>
+      <p>Las cantidades son orientativas para 1 o 2 personas. Las especias se pueden reemplazar por pimienta común o lo que ya tengas.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./js/recipes.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
