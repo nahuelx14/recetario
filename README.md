@@ -1,6 +1,6 @@
-# Recetarios salado y dulce
+# La Libreta de Casa
 
-Aplicación web local con dos sorteadores independientes: 112 recetas saladas y 82 preparaciones dulces. No necesita instalación, servidor, base de datos ni conexión a internet.
+Recetario web con dos sorteadores independientes: 112 recetas saladas y 82 preparaciones dulces. No necesita instalación, servidor ni base de datos.
 
 ## Abrir la aplicación
 

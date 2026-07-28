@@ -98,16 +98,25 @@ summary:focus-visible {
 
 .brand {
   width: max-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--ink);
   font-family: var(--serif);
   font-size: 1.22rem;
   font-weight: 700;
-  line-height: 0.78;
+  line-height: 0.82;
   text-decoration: none;
   letter-spacing: -0.05em;
 }
 
-.brand span {
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brandText span {
   display: block;
 }
 
@@ -1134,6 +1143,12 @@ summary:focus-visible {
 
   .brand {
     font-size: 1.05rem;
+    gap: 7px;
+  }
+
+  .brand img {
+    width: 38px;
+    height: 38px;
   }
 
   .mobileSwitch {
